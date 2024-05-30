@@ -7,19 +7,19 @@ namespace UniverSityManagementApp
 {
     public class Student
     {
-        public int StudentId;
-        public string regNo;
-        public string name;
-        public string email;
-        public string phone;
+        public int StudentId { get; set; }
+        public string regNo { get; set; }
+        public string name { get; set; }
+        public string email { get; set; }
+        public string phone { get; set; }
 
-      /*  public Student(string studentid,string regno,string name,string email,string phone)
-        {
-            this.regNo = regno;
-            this.name = name;
-            this.email = email;
-            this.phone = phone;
-        }*/
+        /*  public Student(string studentid,string regno,string name,string email,string phone)
+          {
+              this.regNo = regno;
+              this.name = name;
+              this.email = email;
+              this.phone = phone;
+          }*/
 
     }
 }

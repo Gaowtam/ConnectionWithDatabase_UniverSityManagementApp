@@ -46,5 +46,10 @@ namespace UniverSityManagementApp
                 lblShow.Text = "Save Failed";
             }
         }
+
+        protected void btnShow_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(url: "Students.aspx");
+        }
     }
 }

@@ -48,7 +48,10 @@
                 </tr>
             </table>
         </div>
+        <strong>
         <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
+        </strong>
+        <asp:Button ID="btnShow" runat="server" OnClick="btnShow_Click" Text="Show" style="height: 29px" />
     </form>
     <asp:Label ID="lblShow" runat="server" Text=""></asp:Label>
 </asp:Content>
