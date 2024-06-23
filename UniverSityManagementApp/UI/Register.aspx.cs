@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using UniverSityManagementApp.BLL;
+using UniverSityManagementApp.Models;
 
 namespace UniverSityManagementApp
 {
@@ -30,21 +32,9 @@ namespace UniverSityManagementApp
             aStudent.email = email;
             aStudent.phone = phone;
 
-            string connectionString = "Server=ESL6;Database=UniversityDB;User=sa;password=123;";
-            string query = "insert into tbStudents values("+aStudent.StudentId+",'"+aStudent.regNo+"','"+aStudent.name+"','"+aStudent.email+"','"+aStudent.phone+"')";
-            SqlConnection connection = new SqlConnection(connectionString);
-            SqlCommand command = new SqlCommand(query, connection);
-            connection.Open();
-            int rowAfffected=command.ExecuteNonQuery();
-            connection.Close();
-            if(rowAfffected>0)
-            {
-                lblShow.Text = "Save Successfull";
-            }
-            else
-            {
-                lblShow.Text = "Save Failed";
-            }
+            StudentManager aManager = new StudentManager();
+            String msg = aManager.SaveStudent(aStudent);
+            lblShow.Text = msg;
         }
 
         protected void btnShow_Click(object sender, EventArgs e)
